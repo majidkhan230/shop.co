@@ -10,7 +10,8 @@ const SearchInput = () => (
       allowClear
       onSearch={onSearch}
       style={{
-        width: 200,
+        width: "100%",
+        borderBlockStyle:"solid",
       }}
     />
 );

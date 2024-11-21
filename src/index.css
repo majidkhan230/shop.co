@@ -1,3 +1,15 @@
+@font-face {
+    font-family: integralcf;
+    src: url("./assets/fonts/Fontspring-DEMO-integralcf-regular.otf");
+  }
+@font-face {
+    font-family: satoshi;
+    src: url("./assets/fonts/Satoshi-Regular.otf");
+  }
+
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
