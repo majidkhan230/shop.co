@@ -15,10 +15,10 @@ function Header() {
   
   
   return (
-    <div className='bg-pink-300 w-full h-[60px] sticky flex items-center justify-between px-4 md:px-20 relative'>
+    <div className=' w-full h-[60px] sticky flex items-center justify-between px-4 md:px-20 '>
       <div className="flex space-x-2 items-baseline">
       <MenuOutlined className='md:hidden' onClick={()=>handleMenu()} style={{fontSize:24}}/>
-        <div className="logo font-extrabold text-3xl font-[integralcf]">Shop.Co</div>
+        <div className="logo font-extrabold text-3xl font-[integralcf] pb-2">Shop.Co</div>
       </div>
         <ul className="navigation hidden md:flex space-x-4  font-[satoshi]">
             <li>Shop</li>
