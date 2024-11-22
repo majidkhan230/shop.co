@@ -18,7 +18,7 @@ return(
     }} />}
   >
     <Meta title={title} />
-    <div className="flex md:space-x-2 mt-2  ">
+    <div className="flex space-x-2 mt-2  ">
     <Rate allowHalf defaultValue={rating.rate} className='flex flex-nowrap text-sm ' />
 <span>{rating.rate}/5</span>
     </div>
