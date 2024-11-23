@@ -8,7 +8,7 @@ function App() {
   <div className='w-full'>
     <Header/>
     <Outlet/>
-   <Footer/>
+   <Footer/>  
   </div>
   )
 }
