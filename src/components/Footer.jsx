@@ -27,7 +27,7 @@ function Footer() {
         </div>
       </div>
       <div className="content">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 bg-[#F0F0F0] p-4 pt-24 md:p-20 ">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 bg-[#F0F0F0] p-4 pt-36 md:p-20 ">
           <div className="flex flex-col space-y-2">
             <div className="logo font-extrabold text-3xl font-[integralcf] pb-2">
               Shop.Co
