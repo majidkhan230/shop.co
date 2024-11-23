@@ -1,6 +1,7 @@
 import React from 'react';
 import { Breadcrumb } from 'antd';
-const MyBreadCrumb = () => (
+const MyBreadCrumb = () => {
+  return(
   <Breadcrumb
   style={{
    paddingTop:"10px",
@@ -22,5 +23,5 @@ const MyBreadCrumb = () => (
       },
     ]}
   />
-);
+)};
 export default MyBreadCrumb;
