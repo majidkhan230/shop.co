@@ -27,7 +27,7 @@ const [products,setProducts] = useState(myProducts);
 
             <Button
               text={"Shop Now"}
-              btnStyles={"bg-black w-full  mb-10"}
+              btnStyles={"bg-black w-full md:w-fit  mb-10"}
               textStyles={"text-white text-xl"}
               onClick={() => alert("clicked on btn")}
             />
