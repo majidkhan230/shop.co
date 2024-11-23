@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import Button from "../components/Button";
 import Counter from "../components/Counter";
+
 import Banner from "../components/Banner";
 import CustomerReviewCard from "../components/CustomerReviewCard";
 import MySlider from "../components/MySlider";
 import { myProducts } from "../utils/constants/products";
 import { customerReviews } from "../utils/constants/customerReview";
+import Button from "../components/Button";
 
 function Home() {
 const [products,setProducts] = useState(myProducts);

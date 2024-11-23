@@ -2,7 +2,7 @@ import React from 'react';
 import { AudioOutlined } from '@ant-design/icons';
 import { Input } from 'antd';
 const { Search } = Input;
-
+import Button from "../components/Button";
 const onSearch = (value, _e, info) => console.log(info?.source, value);
 const SearchInput = () => (
   <Search
