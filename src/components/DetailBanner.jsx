@@ -3,9 +3,11 @@ import React, { useState } from 'react'
 import Line from './Line'
 import Button from './Button'
 import AddCounter from './AddCounter'
+import { images } from '../utils/constants/images'
 
 function DetailBanner() {
   const [countValue,setCountValue] = useState(0);
+  const [showImage,setShowImage] = useState("")
   const increment = ()=>(
     setCountValue((prev)=>prev + 1)
   )  
@@ -17,12 +19,15 @@ function DetailBanner() {
     <div>
         <div className="grid md:grid-cols-6 md:p-4 gap-4 ">
           
-            <div className="flex flex-row md:flex-col  gap-2">
-                <h1 className='w-24 h-24 bg-blue-300 '>img1</h1>
-                <h1 className='w-24 h-24 bg-blue-300 '>img1</h1>
-                <h1 className='w-24 h-24 bg-blue-300 '>img1</h1>
+            <div className="flex flex-row md:flex-col  gap-1  items-end ">
+              {images.slice(0,3).map(({image},index)=>{
+                return(
+                <img key={index} onClick={()=>(setShowImage(image))} src={image} className='object-cover w-28 h-32 border-2  rounded-xl  overflow-hidden  border-gray-100' />
+              )})}
             </div>
-            <div className='col-span-2'></div>
+            <div className='col-span-2'>
+              <img src={showImage} className='w-full h-96 object-cover  rounded-xl  overflow-hidden  ' />
+            </div>
             <div className='flex flex-col col-span-3  space-y-2'>
                 <h1 className='font-[integralcf] text-4xl'>One Life Graphic T-Shirt</h1>
                 <Rate disabled value={2.5}></Rate>
