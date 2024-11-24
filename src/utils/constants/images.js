@@ -1,6 +1,7 @@
 export const images = [
   
   {
+    
     image: "/assets/images/cloth1.png",
   },
   {

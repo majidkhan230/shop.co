@@ -38,6 +38,7 @@ const MyMenuBar = () => {
         selectedKeys={[current]}
         mode="horizontal"
         items={items}
+        className="flex justify-center items-center md:space-x-10"
       />
 
       <div className="main">
