@@ -13,7 +13,58 @@ function Cart() {
       </div>
       <h1 className="text-4xl font-[integralcf]">Your Cart</h1>
       <div className="flex gap-2 mt-10 flex-col md:flex-row ">
-        <div className="cartContainer  h-[400px] md:w-3/5 rounded-md border-2 border-gray-200 flex flex-col  md:gap-2 md:p-4 overflow-y-auto">
+        <div className="cartContainer   md:h-[400px] md:w-3/5 rounded-md border-2 border-gray-200 flex flex-col gap-y-2 md:gap-y-1 md:gap-2 md:p-4 overflow-y-auto">
+           <div className="card  w-full  p-3 flex  border-2 border-gray-200">
+            <div className="image w-1/4 h-full object-cover bg-red-300">
+              image
+            </div>
+            <div className="flex flex-col w-3/4 ml-2">
+              <div className="flex">
+                <h1>Gradient Graphic T-shirt</h1>
+                <div className="icon">delete</div>
+              </div>
+              <div className="size">Size:Large</div>
+              <div className="color">Color:White</div>
+              <div className="price flex justify-between">
+                <h1 className="font-bold text-2xl ">$140</h1>
+                <AddCounter counterStyles={""} />
+              </div>
+            </div>
+          </div>
+           <div className="card  w-full  p-3 flex  border-2 border-gray-200">
+            <div className="image w-1/4 h-full object-cover bg-red-300">
+              image
+            </div>
+            <div className="flex flex-col w-3/4 ml-2">
+              <div className="flex">
+                <h1>Gradient Graphic T-shirt</h1>
+                <div className="icon">delete</div>
+              </div>
+              <div className="size">Size:Large</div>
+              <div className="color">Color:White</div>
+              <div className="price flex justify-between">
+                <h1 className="font-bold text-2xl ">$140</h1>
+                <AddCounter counterStyles={""} />
+              </div>
+            </div>
+          </div>
+           <div className="card  w-full  p-3 flex  border-2 border-gray-200">
+            <div className="image w-1/4 h-full object-cover bg-red-300">
+              image
+            </div>
+            <div className="flex flex-col w-3/4 ml-2">
+              <div className="flex">
+                <h1>Gradient Graphic T-shirt</h1>
+                <div className="icon">delete</div>
+              </div>
+              <div className="size">Size:Large</div>
+              <div className="color">Color:White</div>
+              <div className="price flex justify-between">
+                <h1 className="font-bold text-2xl ">$140</h1>
+                <AddCounter counterStyles={""} />
+              </div>
+            </div>
+          </div>
            <div className="card  w-full  p-3 flex  border-2 border-gray-200">
             <div className="image w-1/4 h-full object-cover bg-red-300">
               image
