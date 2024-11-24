@@ -47,7 +47,7 @@ function DetailBanner() {
           <h1 className="font-bold text-lg md:text-2xl">
             <ins>$260</ins>&nbsp;
             <del className="text-gray-300">$300</del>
-            <span className="px-2 bg-pink-100 text-red-400 rounded-full text-sm md:text-base">
+            <span className="px-2 py-1 ml-2  bg-pink-100 text-red-400 rounded-full text-sm md:text-base">
               -40%
             </span>
           </h1>

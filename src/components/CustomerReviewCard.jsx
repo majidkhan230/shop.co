@@ -9,7 +9,9 @@ const CustomerReviewCard = ({ name, review, rating }) => (
     height:"200px",
     padding:0, }}>
     <Card.Meta
-      title={  <Rate disabled value={rating} />}
+      title={  <Rate disabled value={rating} style={{
+        fontSize:'18px'
+      }} />}
     />
     <div style={{ marginTop: 10 }}>
       <h1 className='font-semibold text-xl'>{name}</h1>
