@@ -7,9 +7,13 @@ import MySlider from "../components/MySlider";
 import { myProducts } from "../utils/constants/products";
 import { customerReviews } from "../utils/constants/customerReview";
 import Button from "../components/Button";
+import { useDispatch, useSelector } from "react-redux";
 
 function Home() {
 const [products,setProducts] = useState(myProducts);
+const dispatch = useDispatch()
+const res = useSelector((state)=>state)
+console.log(res)
   return (
     <div>
       {/* Top Page */}
@@ -29,7 +33,9 @@ const [products,setProducts] = useState(myProducts);
               text={"Shop Now"}
               btnStyles={"bg-black w-full md:w-fit  mb-10"}
               textStyles={"text-white text-xl"}
-              onClick={() => alert("clicked on btn")}
+              onClick={() => dispatch({
+                type:"addtocart",payload:[{name:'majid'}],
+              })}
             />
 
             <div className="flex space-x-4 flex-wrap justify-center md:flex-nowrap md:justify-normal gap-2">
