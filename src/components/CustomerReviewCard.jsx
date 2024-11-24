@@ -5,7 +5,7 @@ const { Title, Text } = Typography;
 
 const CustomerReviewCard = ({ name, review, rating,containerStyle }) => (
   <Card
-    className={`md:w-1/2    height-[200px]    ${containerStyle}`}
+    className={`w-fit  md:w-[48%]    height-[300px]    ${containerStyle}`}
     >
     <Card.Meta
       title={  <Rate disabled value={rating} style={{
