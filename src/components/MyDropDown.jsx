@@ -40,7 +40,7 @@ const MyDropDown = ({styleDropDown}) => (
     menu={{
       items,
     }}
-    className={`rounded-full bg-gray-200 flex justify-center items-center px-4 py-2 ${styleDropDown} border-2 hover:bg-white `}
+    className={`bg-gray-200 flex justify-center items-center px-4 py-2 ${styleDropDown}  hover:bg-white `}
   >
     <a onClick={(e) => e.preventDefault()}>
       <Space>
