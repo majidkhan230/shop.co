@@ -21,7 +21,7 @@ function Banner({ title, products, setProducts }) {
         <Button
           onClick={handleBtn}
           btnStyles={
-            "bg-white px-20 md:px-10  rounded-full border-2 border-gay-400 my-5 md:my-10 hover:bg-gray-200"
+            "md:w-[200px]  bg-white px-20 md:px-10  rounded-full border-2 border-gay-400 my-5 md:my-10 hover:bg-gray-200"
           }
           textStyles={"text-black font-semibold"}
           text={"View All"}
