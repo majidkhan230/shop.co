@@ -15,7 +15,7 @@ function Products() {
         <MyMenu/>
       </aside>
       <div className=" products md:w-4/5 md:px-4">
-      <div className="top flex justify-between items-center md:px-2 p-1 md:p-0">
+      <div className="top flex justify-between items-center md:px-2  md:p-0">
         <h1 className='text-3xl font-bold'>Casuals</h1>
         <div className="sort flex items-center space-x-2 ">
           Sort by : <MyDropDown styleDropDown={'w-fit px-1 my-0 text-sm bg-transparent border-0  '} />

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Counter from "../components/Counter";
 
 import Banner from "../components/Banner";
@@ -8,14 +8,37 @@ import { myProducts } from "../utils/constants/products";
 import { customerReviews } from "../utils/constants/customerReview";
 import Button from "../components/Button";
 import { useDispatch, useSelector } from "react-redux";
+import axios from "axios";
+import MyMessage from "../components/MyMessage";
 
 function Home() {
-const [products,setProducts] = useState(myProducts);
+// const [products,setProducts] = useState([]);
+const {contentHandler,showMessage} = MyMessage();
 const dispatch = useDispatch()
-const res = useSelector((state)=>state)
+const res = useSelector((state) => state.products);
 console.log(res)
+
+const fetchProducts = async()=>{
+  try {
+    const data = await axios.get("https://fakestoreapi.com/products")
+// setProducts(data?.data)
+const productsdata = await data?.data
+dispatch({type:"allproduct",payload:productsdata})
+    console.log(data?.data)
+  } catch (error) {
+    console.log(error.message)
+  }
+}
+
+
+useEffect(()=>{
+fetchProducts();
+},[])
+
+
   return (
     <div>
+      {contentHandler}
       {/* Top Page */}
       <div>
         <div className="px-4 md:px-20 w-full bg-[#F2F0F1]   flex flex-col  md:flex-row">
@@ -64,14 +87,14 @@ console.log(res)
       {/* page2 */}
       <Banner
         title={"New Arrivals"}
-        products={products}
-        setProducts={setProducts}
+        products={res}
+        // setProducts={setProducts}
       />
 
       <Banner
         title={"Top Selling"}
-        products={products}
-        setProducts={setProducts}
+        products={res}
+        // setProducts={setProducts}s
       />
 
 

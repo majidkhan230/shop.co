@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CustomCard from "./CustomCard";
 import Button from "./Button";
 
-function Banner({ title, products, setProducts }) {
+function Banner({ title, products }) {
   const [val, setVal] = useState(4);
 
   const handleBtn = () => setVal((prev) => val + 4);

@@ -9,12 +9,13 @@ import {
 import { Avatar, Badge } from "antd";
 import DrawerFeedback from "./Drawer";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function Header() {
+  const res = useSelector((state) => state.addtocart);
   const [open, setOpen] = useState(false);
 
   const handleMenu = () => setOpen(true);
-
   return (
     <div className=" w-full h-[60px] sticky flex items-center justify-between px-4 md:px-20 ">
       <div className="flex space-x-2 items-baseline">
@@ -30,7 +31,9 @@ function Header() {
         </Link>
       </div>
       <ul className="navigation hidden md:flex space-x-4  font-[satoshi]">
-        <li><Link to={"/products"}>Shop</Link></li>
+        <li>
+          <Link to={"/products"}>Shop</Link>
+        </li>
         <li>On Sale</li>
         <li>New Arrivals</li>
         <li>Brands</li>
@@ -45,11 +48,11 @@ function Header() {
           className="md:hidden"
         />
         <Link to="/cart">
-          <Badge count={7}>
+          <Badge count={res.length}>
             <ShoppingCartOutlined
               style={{
                 fontSize: 30,
-                marginRight:4,
+                marginRight: 8,
               }}
             />
           </Badge>
