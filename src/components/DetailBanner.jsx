@@ -4,16 +4,19 @@ import Line from './Line';
 import Button from './Button';
 import AddCounter from './AddCounter';
 import { images } from '../utils/constants/images';
+import MyMessage from './MyMessage';
 
 function DetailBanner() {
   const [countValue, setCountValue] = useState(0);
   const [showImage, setShowImage] = useState(images[0]?.image || "");
-
+const {contextHolder,showMessage} = MyMessage();
   const increment = () => setCountValue((prev) => prev + 1);
   const decrement = () => setCountValue((prev) => Math.max(prev - 1, 0));
 
+  
   return (
     <div className="p-4">
+      {contextHolder}
       <div className="grid grid-cols-1 md:grid-cols-6 gap-2">
         {/* Thumbnail Images */}
         <div className="flex md:flex-col gap-2 items-center justify-center md:items-end">
@@ -105,6 +108,7 @@ function DetailBanner() {
             <Button
               btnStyles="w-full bg-black mt-0 hover:bg-white text-white hover:text-black border-2 border-transparent hover:border-black"
               text="Add to Cart"
+              onClick={() => showMessage("success",{content:"successfully added to cart!"}) }
             />
           </div>
         </div>

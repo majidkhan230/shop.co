@@ -15,7 +15,9 @@ return(
         width:'100%',
         height:"200px",
         marginTop:"10px",
-    }} />}
+    }}
+     
+    />}
   >
     <Meta title={title} />
     <div className="flex space-x-2 mt-2  ">
