@@ -12,7 +12,7 @@ function RatingAndReviews() {
         <h1 className=" p-2 font-bold text-2xl  md:text-3xl align-text-bottom">All Reviews</h1>
         <div className="buttons flex space-x-2">
           <SettingOutlined className="text-2xl md:text-3xl " />
-            <MyDropDown styleDropDown={""} />
+            <MyDropDown styleDropDown={"rounded-full hidden md:flex"} />
           <Button
             text={"Write a Review"}
             textStyles={"text-md"}

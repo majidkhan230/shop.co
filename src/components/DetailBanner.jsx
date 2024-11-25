@@ -108,7 +108,7 @@ const {contextHolder,showMessage} = MyMessage();
             <Button
               btnStyles="w-full bg-black mt-0 hover:bg-white text-white hover:text-black border-2 border-transparent hover:border-black"
               text="Add to Cart"
-              onClick={() => showMessage("success",{content:"successfully added to cart!"}) }
+              onClick={() => showMessage("sucess",{content:"successfully added to cart!"}) }
             />
           </div>
         </div>
