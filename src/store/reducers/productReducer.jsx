@@ -12,7 +12,7 @@ export const productReducer = (state = intialState, { type, payload }) => {
     case "deleteproduct":
       return {
         ...state,
-        addtocart: state.addtocart.filter((item) => item.id !== payload.id),
+        addtocart: state.addtocart.filter((item) => item.id !== payload),
       };
     default:
       return state;

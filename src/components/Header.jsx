@@ -12,8 +12,8 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 function Header() {
-  const res = useSelector((state) => state.addtocart);
   const [open, setOpen] = useState(false);
+  const res = useSelector((state) => state.addtocart);
 
   const handleMenu = () => setOpen(true);
   return (
@@ -52,7 +52,7 @@ function Header() {
             <ShoppingCartOutlined
               style={{
                 fontSize: 30,
-                marginRight: 8,
+                marginRight: 4,
               }}
             />
           </Badge>

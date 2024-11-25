@@ -1,12 +1,16 @@
 import React from 'react'
 import MyMenu from '../components/MyMenu'
 import MyBreadCrumb from '../components/MyBreadCrumb'
-import { myProducts } from '../utils/constants/products';
+// import { myProducts } from '../utils/constants/products';
 import CustomCard from '../components/CustomCard';
 import MyDropDown from '../components/MyDropDown';
 import MyPagination from '../components/MyPagination';
+import { useSelector } from 'react-redux';
 
 function Products() {
+  const products = useSelector((state)=>state.products)
+
+  // console.log("shop",products)
   return (
     <div className='w-full px-4 md:px-20'>
       <MyBreadCrumb/>
@@ -22,7 +26,7 @@ function Products() {
         </div>
       </div>
       <div className=' grid grid-cols-2  md:grid-cols-3 gap-2 p-2'>
-        {myProducts.map((item, index) => {
+        {products.map((item, index) => {
             return <CustomCard key={index} data={item} />;
           })}
       </div>

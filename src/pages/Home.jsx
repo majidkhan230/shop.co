@@ -10,12 +10,14 @@ import Button from "../components/Button";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import MyMessage from "../components/MyMessage";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
 // const [products,setProducts] = useState([]);
 const {contentHandler,showMessage} = MyMessage();
 const dispatch = useDispatch()
 const res = useSelector((state) => state.products);
+const navigate = useNavigate();
 console.log(res)
 
 const fetchProducts = async()=>{
@@ -24,7 +26,7 @@ const fetchProducts = async()=>{
 // setProducts(data?.data)
 const productsdata = await data?.data
 dispatch({type:"allproduct",payload:productsdata})
-    console.log(data?.data)
+    // console.log(data?.data)
   } catch (error) {
     console.log(error.message)
   }
@@ -56,9 +58,7 @@ fetchProducts();
               text={"Shop Now"}
               btnStyles={"bg-black w-full md:w-fit  mb-10"}
               textStyles={"text-white text-xl"}
-              onClick={() => dispatch({
-                type:"addtocart",payload:[{name:'majid'}],
-              })}
+              onClick={()=>navigate("/products")}
             />
 
             <div className="flex space-x-4 flex-wrap justify-center md:flex-nowrap md:justify-normal gap-2">
